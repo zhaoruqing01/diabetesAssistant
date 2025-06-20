@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糖尿病预治智能助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/output.css">
+    <style>
+        iframe {
+            width: 100%;
+            height: calc(100vh - 50px);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="main/main.html"></iframe>
+    
+    <nav class="fixed bottom-0 w-full bg-white border-t border-gray-100">
+        <div class="grid grid-cols-5 h-[50px]" id="bottomNav">
+            <div class="flex flex-col items-center justify-center text-primary nav-item active">
+                <i class="fas fa-home text-[20px]"></i>
+                <span class="text-xs mt-1">首页</span>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-clipboard-list text-[20px]"></i>
+                <a href="./life/life.html"><span class="text-xs mt-1">方案定制</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400">
+                <i class="fas fa-heart text-[20px]"></i>
+                <a href="./habit/habit.html"><span class="text-xs mt-1">生活习惯</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400">
+                <i class="fas fa-robot text-[20px]"></i>
+                <span class="text-xs mt-1">AI 助手</span>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400">
+                <i class="fas fa-user text-[20px]"></i>
+                <a href="./mine/mine.html"><span class="text-xs mt-1">个人中心</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(nav => {
+                        nav.classList.remove('active', 'text-primary');
+                        nav.classList.add('text-gray-400');
+                    });
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active', 'text-primary');
+                    this.classList.remove('text-gray-400');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

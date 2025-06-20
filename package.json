@@ -1,0 +1,14 @@
+{
+  "name": "diabetes-assistant",
+  "version": "1.0.0",
+  "description": "糖尿病预治智能助手",
+  "scripts": {
+    "build": "tailwindcss -i ./css/index.css -o ./dist/output.css --watch",
+    "build:prod": "tailwindcss -i ./css/index.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}

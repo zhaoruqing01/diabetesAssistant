@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生活习惯</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',  // 主蓝色
+                        secondary: '#E6F4FF',  // 浅蓝背景
+                        accent: '#F0F9FF'      // 更浅蓝背景
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- 顶部导航 -->
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+        <div class="flex items-center justify-between px-4 h-14">
+            <button class="text-primary p-2 rounded-md">
+                <i class="fas fa-arrow-left text-lg"></i>
+            </button>
+            <h1 class="text-lg font-medium text-gray-800">生活习惯</h1>
+            <button class="text-primary p-2 rounded-md">
+                <i class="fas fa-share text-lg"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="pt-14 pb-16 px-4">
+        <!-- 睡眠管理模块 -->
+        <div class="mt-4 bg-white rounded-lg shadow-sm overflow-hidden">
+            <div class="p-4">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">睡眠管理</h2>
+                
+                <!-- 早睡建议 -->
+                <div class="bg-accent p-4 rounded-lg mb-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">早睡计划</h3>
+                            <p class="text-sm text-gray-600">22:30前关闭电子设备<br>阅读30分钟纸质书助眠，目标23:00前入睡</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+
+                <!-- 午睡建议 -->
+                <div class="bg-accent p-4 rounded-lg">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">午间小憩</h3>
+                            <p class="text-sm text-gray-600">12:30-13:00间午睡15-20分钟<br>避免超过30分钟，防止影响夜间睡眠</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 饮水提醒模块 -->
+        <div class="mt-4 bg-white rounded-lg shadow-sm overflow-hidden">
+            <div class="p-4">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">饮水习惯</h2>
+                
+                <!-- 晨起饮水 -->
+                <div class="bg-accent p-4 rounded-lg mb-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">晨起第一杯</h3>
+                            <p class="text-sm text-gray-600">早晨起床后30分钟内饮用200ml温水<br>唤醒肠胃，促进新陈代谢</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+
+                <!-- 定时饮水 -->
+                <div class="bg-accent p-4 rounded-lg">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">日间补水</h3>
+                            <p class="text-sm text-gray-600">每1.5-2小时饮用100-150ml水<br>全天饮水量建议1500-2000ml（根据活动量调整）</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 情绪调节模块 -->
+        <div class="mt-4 bg-white rounded-lg shadow-sm overflow-hidden">
+            <div class="p-4">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">情绪管理</h2>
+                
+                <!-- 每日冥想 -->
+                <div class="bg-accent p-4 rounded-lg mb-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">正念冥想</h3>
+                            <p class="text-sm text-gray-600">每日19:00-19:15进行5分钟冥想<br>专注呼吸，缓解日间压力</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+
+                <!-- 心情记录 -->
+                <div class="bg-accent p-4 rounded-lg">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">情绪日记</h3>
+                            <p class="text-sm text-gray-600">睡前10分钟记录当日情绪关键词<br>（如：平静/焦虑/开心），关注心理状态</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部导航 -->
+    <nav class="fixed bottom-0 w-full bg-white border-t border-gray-100">
+        <div class="grid grid-cols-5 h-[50px]" id="bottomNav">
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-home text-[20px]"></i>
+                <a href="../index.html"><span class="text-xs mt-1">首页</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-primary nav-item active">
+                <i class="fas fa-clipboard-list text-[20px]"></i>
+                <a href="../life/life.html"><span class="text-xs mt-1">方案定制</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-heart text-[20px]"></i>
+                <a href="./habit.html"><span class="text-xs mt-1">生活习惯</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-robot text-[20px]"></i>
+                <span class="text-xs mt-1">AI 助手</span>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-user text-[20px]"></i>
+                <a href="../mine/mine.html"><span class="text-xs mt-1">个人中心</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(nav => {
+                        nav.classList.remove('active', 'text-primary');
+                        nav.classList.add('text-gray-400');
+                    });
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active', 'text-primary');
+                    this.classList.remove('text-gray-400');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+    

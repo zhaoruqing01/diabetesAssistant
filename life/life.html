@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康生活方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',  // 主蓝色
+                        secondary: '#E6F4FF',  // 浅蓝背景
+                        accent: '#F0F9FF'      // 更浅蓝背景
+                    },
+                    spacing: {
+                        'section': '1.25rem'   // 模块间距
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- 顶部导航 -->
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+        <div class="flex items-center justify-between px-4 h-14">
+            <button class="text-primary p-2 rounded-md">
+               
+            </button>
+            <h1 class="text-lg font-medium text-gray-800">健康生活方案</h1>
+            <button class="text-primary p-2 rounded-md">
+                <i class="fas fa-share text-lg"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="pt-14 pb-16 px-4">
+        <!-- 饮食管理模块 -->
+        <div class="mt-section bg-white rounded-lg shadow-sm overflow-hidden">
+            <div class="p-4">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">饮食管理</h2>
+                
+                <!-- 早餐建议 -->
+                <div class="bg-accent p-4 rounded-lg mb-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">早餐建议</h3>
+                            <p class="text-sm text-gray-600">一个水煮蛋 + 一片全麦面包 + 一杯无糖豆浆（约300ml）<br>搭配5颗原味杏仁，补充优质蛋白和健康脂肪</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+
+                <!-- 午餐建议 -->
+                <div class="bg-accent p-4 rounded-lg mb-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">午餐建议</h3>
+                            <p class="text-sm text-gray-600">糙米饭150g + 清蒸鲈鱼120g + 清炒菠菜200g<br>少油少盐，保证碳水、蛋白质和膳食纤维均衡</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+
+                <!-- 晚餐建议 -->
+                <div class="bg-accent p-4 rounded-lg">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">晚餐建议</h3>
+                            <p class="text-sm text-gray-600">荞麦面100g + 白灼虾80g + 凉拌西兰花150g<br>清淡易消化，避免晚餐过晚或过量</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 运动建议模块 -->
+        <div class="mt-section bg-white rounded-lg shadow-sm overflow-hidden">
+            <div class="p-4">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">运动建议</h2>
+                
+                <!-- 晨间运动 -->
+                <div class="bg-accent p-4 rounded-lg mb-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">晨间运动</h3>
+                            <p class="text-sm text-gray-600">慢跑20分钟（配速6-7分/公里）<br>或快走30分钟，提升代谢和心肺功能</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+
+                <!-- 晚间运动 -->
+                <div class="bg-accent p-4 rounded-lg">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-primary mb-1">晚间运动</h3>
+                            <p class="text-sm text-gray-600">瑜伽15分钟（重点拉伸肩颈和腿部）<br>或家庭核心训练（平板支撑30秒×3组），缓解一天疲劳</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-md">打卡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部导航 -->
+    <nav class="fixed bottom-0 w-full bg-white border-t border-gray-100">
+        <div class="grid grid-cols-5 h-[50px]" id="bottomNav">
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-home text-[20px]"></i>
+                <a href="../index.html"><span class="text-xs mt-1">首页</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-primary nav-item active">
+                <i class="fas fa-clipboard-list text-[20px]"></i>
+                <a href="./life.html"><span class="text-xs mt-1">方案定制</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-heart text-[20px]"></i>
+                <a href="../habit/habit.html"><span class="text-xs mt-1">生活习惯</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-robot text-[20px]"></i>
+                <span class="text-xs mt-1">AI 助手</span>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-user text-[20px]"></i>
+                <a href="../mine/mine.html"><span class="text-xs mt-1">个人中心</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(nav => {
+                        nav.classList.remove('active', 'text-primary');
+                        nav.classList.add('text-gray-400');
+                    });
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active', 'text-primary');
+                    this.classList.remove('text-gray-400');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+    

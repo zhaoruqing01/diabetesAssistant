@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糖尿病预治智能助手</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <style>
+        body { background-color: #FFFFFF; }
+        .search-input:focus { outline: none; }
+        .doctor-card { transition: all 0.3s ease; }
+        .doctor-card:hover { transform: translateY(-2px); }
+    </style>
+    <script src="../../js/api.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
+</head>
+<body class="w-[375px] min-h-[762px] mx-auto pb-[60px]">
+    <header class="fixed top-0 w-full bg-white z-50 px-4 py-3 border-b border-gray-100">
+        <div class="flex items-center justify-between">
+            <div class="font-['Pacifico'] text-primary text-xl">logo</div>
+            <div class="flex items-center bg-secondary rounded-full px-4 py-2 w-[240px]">
+                <i class="fas fa-search text-gray-400 text-sm"></i>
+                <input type="text" placeholder="搜索症状、医生、文章" class="search-input bg-transparent ml-2 text-sm w-full border-none">
+            </div>
+        </div>
+    </header>
+
+    <main class="mt-[60px]">
+        <div class="w-full h-[180px] relative overflow-hidden">
+            <img src="https://ai-public.mastergo.com/ai/img_res/3f334077992290af8ff11919b3ebd6f1.jpg" class="w-full h-full object-cover" alt="医疗banner">
+        </div>
+
+        <section class="px-4 py-6">
+            <h2 class="text-lg font-semibold mb-4">专业医师团队</h2>
+            <div id="doctors-container" class="grid grid-cols-3 gap-3">
+
+            </div>
+        </section>
+
+        <section class="px-4 py-6">
+            <h2 class="text-lg font-semibold mb-4">健康科普</h2>
+            <div id="articles-container" class="space-y-4">
+
+            </div>
+        </section>
+
+        <section class="px-4 py-6">
+            <h2 class="text-lg font-semibold mb-4">糖尿病类型</h2>
+            <div id="diabetes-types-container" class="grid grid-cols-2 gap-4">
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="./js/mine.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="w-[375px] mx-auto bg-white min-h-screen relative pb-60"> <!-- 增加底部内边距至60px -->
+        <div class="bg-gradient-to-b from-primary to-secondary p-6 rounded-b-2xl">
+            <div class="flex items-center gap-4">
+                <div class="w-20 h-20 rounded-full border-4 border-white overflow-hidden">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/1c353a60ae4efca9450e86b9d4bf7f2c.jpg" 
+                         class="w-full h-full object-cover" alt="头像">
+                </div>
+                <div>
+                    <h1 class="text-white text-xl font-medium">陈美玲</h1>
+                    <p class="text-white/80 text-sm mt-1">产品经理 · 高级会员</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-4 mt-6">
+            <div class="space-y-3">
+                <a href="#" class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-user text-primary w-5 h-5 flex items-center justify-center"></i>
+                        <span class="text-gray-700">个人信息</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+
+                <a href="#" class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-file-alt text-primary w-5 h-5 flex items-center justify-center"></i>
+                        <span class="text-gray-700">我的方案</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+
+                <a href="#" class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-newspaper text-primary w-5 h-5 flex items-center justify-center"></i>
+                        <span class="text-gray-700">我的资讯</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+
+                <a href="#" class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-calendar-check text-primary w-5 h-5 flex items-center justify-center"></i>
+                        <span class="text-gray-700">打卡记录</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+
+                <a href="#" class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-question-circle text-primary w-5 h-5 flex items-center justify-center"></i>
+                        <span class="text-gray-700">帮助中心</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+
+                <a href="#" class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-robot text-primary w-5 h-5 flex items-center justify-center"></i>
+                        <span class="text-gray-700">AI 智能管理平台</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-50 left-0 w-full p-4"> <!-- 调整底部距离为10px -->
+            <a href="../login/login.html">
+                <button class="w-full bg-primary text-white py-3 rounded-button font-medium">
+                    退出登录
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <nav class="fixed bottom-0 w-full bg-white border-t border-gray-100 h-12"> <!-- 明确导航栏高度 -->
+        <div class="grid grid-cols-5 h-full" id="bottomNav">
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-home text-[20px]"></i>
+                <a href="../index.html"><span class="text-xs mt-1">首页</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-clipboard-list text-[20px]"></i>
+                <a href="../life/life.html"><span class="text-xs mt-1">方案定制</span></a>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-heart text-[20px]"></i>
+                <span class="text-xs mt-1">生活习惯</span>
+            </div>
+            <div class="flex flex-col items-center justify-center text-gray-400 nav-item">
+                <i class="fas fa-robot text-[20px]"></i>
+                <span class="text-xs mt-1">AI 助手</span>
+            </div>
+            <div class="flex flex-col items-center justify-center text-primary nav-item active">
+                <i class="fas fa-user text-[20px]"></i>
+                <span class="text-xs mt-1">个人中心</span>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(nav => {
+                        nav.classList.remove('active', 'text-primary');
+                        nav.classList.add('text-gray-400');
+                    });
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active', 'text-primary');
+                    this.classList.remove('text-gray-400');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
